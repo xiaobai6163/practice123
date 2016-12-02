@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PictureSwitch</title>
+    <style>
+        .img-box{
+            width: 800px;
+            height: 449px;
+            margin: auto;
+            position: relative;
+            top:100px;
+        }
+        .img-box img{
+            position: absolute;
+            width: 800px;
+            height: 449px;
+        }
+        .xx{
+            z-index: 0;
+        }
+        .bw{
+            z-index: 1;
+        }
+        .btn-box{
+            z-index: 100;
+            left:400px;
+            top:100px;
+            position:absolute;
+        }
+        .btn-box button{
+            width: 200px;
+            height: 20px;
+            border: 1px solid #89cbdb;
+            border-radius: 5px;
+            font-size: 18px;
+            margin:40px;
+            outline: none;
+        }
+        .btn-box button:hover{
+            background-color: #ddd;
+            color: #3070e0;
+        }
+        .blackbackg{
+            color:blue;
+            background-image:url("images/btn-blue.png");
+        }
+        .graybackg{
+            color:black;
+            background-image: url("images/btn-gray.png");
+        }
+    </style>
+</head>
+<body>
+<div class="img-box">
+    <img id="image2" class="xx" src="images/xx.jpg">
+    <img id="image1" class="bw" src="images/bw.jpg">
+    <div class="btn-box">
+        <button class="graybackg" id="bw">巴卫</button>
+        <button class="blackbackg" id="xx">小新</button>
+    </div>
+</div>
+
+<script>
+    var btns=document.getElementsByTagName("button");
+    var imgs=document.getElementsByTagName("img");
+
+    function SwitchPicture(id){
+        for(var i=0;i<imgs.length;i++){
+            if(imgs[i].className==id)
+                imgs[i].style.zIndex=2;
+            else
+                imgs[i].style.zIndex=1;
+        }
+    }
+    for(var i=0;i<btns.length;i++){
+        btns[i].onclick=function(){
+            var id=this.id;
+            SwitchPicture(id);
+        }
+    }
+</script>
+</body>
+</html>
