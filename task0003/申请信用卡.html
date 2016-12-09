@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <title>中国银行信用卡</title>
+<body>
+<div class="container">
+        <div>
+            <form id="identity_form" method="post" action="/apply/pc/mainAppi/showGuideVerify" class="form-horizontal">
+                <fieldset>
+                    <div class="form-group">
+                        <div class="col-md-12 col-sm-12 customer">尊敬的客户</div>
+                    </div>
+                        <div>
+                            请您填写如下资料，以便我们为您选择办卡最便捷的通道。<br/>
+                            <span>新客户在线申请暂只面对持二代身份证的客户开放。</span>
+                        </div>
+                        <div class="col-md-6 col-sm-4 col-xs-5" id="extTip">
+                            <label class="control-label" for="appiMcAddrState">请选择您所在省/市</label>
+                            <select id="appiMcAddrState" name="appiMcAddrState" class="form-control">
+                                <option value="">请选择</option>
+
+                                <option data-branchId="p-12" value="4344899000">安徽省</option>
+
+                                <option data-branchId="p-1" value="4110142000">北京市</option>
+
+                                <option data-branchId="p-22" value="4508642000">重庆市</option>
+
+                                <option data-branchId="p-13" value="4355481000">福建省</option>
+
+                                <option data-branchId="p-28" value="4623251001">甘肃省</option>
+
+                                <option data-branchId="p-35" value="4487669000">深圳市</option>
+
+                                <option data-branchId="p-19" value="4447504001">广东省</option>
+
+                                <option data-branchId="p-20" value="4458051210">广西壮族自治区</option>
+
+                                <option data-branchId="p-24" value="4528882039">贵州省</option>
+
+                                <option data-branchId="p-21" value="4467806000">海南省</option>
+
+                                <option data-branchId="p-3" value="4130740999">河北省</option>
+
+                                <option data-branchId="p-16" value="4416243111">河南省</option>
+
+                                <option data-branchId="p-8" value="4232465999">黑龙江省</option>
+
+                                <option data-branchId="p-17" value="4426405000">湖北省</option>
+
+                                <option data-branchId="p-18" value="4436955000">湖南省</option>
+
+                                <option data-branchId="p-7" value="4222208000">吉林省</option>
+
+                                <option data-branchId="p-37" value="4324445000">苏州市</option>
+
+                                <option data-branchId="p-10" value="4324433001">江苏省</option>
+
+                                <option data-branchId="p-14" value="4367370001">江西省</option>
+
+                                <option data-branchId="c-38" value="4210038999">大连市</option>
+
+                                <option data-branchId="p-6" value="4211785000">辽宁省</option>
+
+                                <option data-branchId="p-5" value="4151405000">内蒙古自治区</option>
+
+                                <option data-branchId="p-30" value="4643347000">宁夏回族自治区</option>
+
+                                <option data-branchId="p-29" value="4633469000">青海省</option>
+
+                                <option data-branchId="c-136" value="4370003900">青岛市</option>
+
+                                <option data-branchId="p-15" value="4373810000">山东省</option>
+
+                                <option data-branchId="p-4" value="4141041000">山西省</option>
+
+                                <option data-branchId="p-27" value="4613016070">陕西省</option>
+
+                                <option data-branchId="p-9" value="4310303999">上海市</option>
+
+                                <option data-branchId="p-23" value="4518631001">四川省</option>
+
+                                <option data-branchId="p-2" value="4120202000">天津市</option>
+
+                                <option data-branchId="p-26" value="4540600000">西藏自治区</option>
+
+                                <option data-branchId="p-31" value="4653600000">新疆维吾尔自治区</option>
+
+                                <option data-branchId="p-25" value="4539146000">云南省</option>
+
+                                <option data-branchId="p-36" value="4335143000">宁波市</option>
+
+                                <option data-branchId="p-11" value="4335129001">浙江省</option>
+
+                            </select>
+                            <span class="first_prompt">如您是首次申请，卡片必须到您所在省市的中国银行任意网点激活方能使用</span>
+                        </div>
+
+                        <div>
+                            <label class="control-label" for="appiFirstName">姓</label>
+                            <div><input type="text" class="form-control" id="appiFirstName" name="appiFirstName" placeholder="请输入姓" maxlength="5" required="required"></div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-10">
+                            <label class="control-label" for="appiFamilyName">名</label>
+                            <div><input type="text" class="form-control" id="appiFamilyName" name="appiFamilyName" placeholder="请输入名字" maxlength="5" required="required"></div>
+                        </div>
+                        <div>
+                            <label class="control-label" for="appiMcIdNumber">身份证号码</label>
+                            <div><input type="text" class="form-control" id="appiMcIdNumber" name="appiMcIdNumber" placeholder="请输入身份证号码"  maxlength="20" required="required"></div>
+                        </div>
+
+                        <div>
+                            <label class="control-label" for="appiMcMPhone" id="phoneLabel">手机号</label>
+                            <div><input type="text" class="form-control" id="appiMcMPhone" name="appiMcMPhone" placeholder="新客户请输入手机号" maxlength="11"></div>
+                            <!-- <p id="platinumMessage"></p> -->
+                            <p id="message" style="color:#b50029"></p>
+                            <label id="verifyCode"></label>
+                        </div>
+                        <div>
+                            <label class="control-label" for="indentifyCode">手机动态验证码</label>
+                            <div>
+                                <input type="button" class="getCodeBtn" id="postIndentifyCode" value="获取手机验证码" />
+                            </div>
+                        </div>
+                        <div>
+                            <label class="control-label" for="indentifyCode">&nbsp;</label>
+                            <div>
+                                <input type="text" class="form-control" id="indentifyCode" name="indentifyCode" maxlength="6"/>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="agreement">
+                                <input  type="checkbox" id="agreement">本人已阅读并同意并遵守<a data-toggle="modal" data-target="#goldCard" target="_blank">《中国银行股份有限公司信用卡领用合约》</a>法律文件。
+                            </label>
+                        </div>
+                        <div>
+                            <a href="#" id="verifitySubmit" class="btn btn-apply">下一步</a>
+                        </div>
+                        <p id="new_txt" class="col-xs-8">
+                            尊敬的客户！为提供更好的信用卡服务，请您在申请中国银行信用卡时，务必填写本人真实有效的个人信息，如信息有误将会直接影响卡片激活，我行网点工作人员有权对已核发的卡片进行不予激活、收回或销户处理。
+                        </p>
+                </fieldset>
+            </form>
+        </div>
+</div>
+
+</body>
+</html>
